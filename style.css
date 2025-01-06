@@ -1,0 +1,128 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fce4ec;
+    color: #333;
+}
+header {
+    /* background-color: #880e4f; */
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    background-image: linear-gradient(to right top, #976bd1, #d869b7, #fb7698, #ff927d, #ffb372, #fac36f, #f0d471, #e2e57a, #ddea72, #d5f06b, #ccf564, #c1fb5f);
+    color:#e82e46;
+    padding: 1rem 0;
+    text-align: center;
+    @font-face {
+        font-family:pallofont ;
+        src: url("Bluesty.otf")format("opentype");
+    }
+}
+header .logo {
+    height: 40px;
+    width: auto;
+    margin-right: 1rem;
+}
+header h1 {
+    /* background-image: linear-gradient(to right top, #976bd1, #d869b7, #fb7698, #ff927d, #ffb372, #fac36f, #f0d471, #e2e57a, #ddea72, #d5f06b, #ccf564, #c1fb5f); */
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a:hover {
+    background: #ad1457;
+    border-radius: 5px;
+}
+
+main {
+    position: relative; /* To position the pseudo-element */
+    padding: 2rem;
+    color: #333;
+    z-index: 1; /* Ensures the content stays above the background overlay */
+    background: rgba(255, 255, 255, 0.8); /* Fallback for browsers without ::before support */
+}
+
+/* Pseudo-element for the background image */
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('cifa.jpg') no-repeat center center/cover;
+    opacity: 0.5; /* Controls transparency */
+    z-index: -1; /* Ensures it stays behind the content */
+    /* border-radius: 10px; Matches the parent radius */
+}
+section {
+    margin-bottom: 2rem;
+}
+h2 {
+    color: #880e4f;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+p{
+    font-weight: 600;
+    color: #000000;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+    font-weight: 600;
+    color:#000000 ;
+}
+table th {
+    background-color: #f8bbd0;
+    color: #880e4f;
+}
+details {
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+footer {
+    /* background: #880e4f; */
+    background-image: linear-gradient(to right top, #976bd1, #d869b7, #fb7698, #ff927d, #ffb372, #fac36f, #f0d471, #e2e57a, #ddea72, #d5f06b, #ccf564, #c1fb5f);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+footer a {
+    color: blue;
+    text-decoration: underline;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: #441752;
+}
